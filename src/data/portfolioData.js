@@ -55,6 +55,17 @@ export const projects = [
     logo: './assets/sal71-logo.png',
     watermark: './assets/sal71-watermark.png',
   },
+  {
+    slug: 'cappro',
+    title: 'CapPRO',
+    category: 'Produtividade para Windows',
+    description: 'Utilitário nativo para Windows para capturas de tela, edição rápida e produtividade.',
+    technologies: [],
+    link: 'https://github.com/danncodil/CapPRO/releases/latest/download/CapPRO-win-x64.zip',
+    action: 'Baixar para Windows',
+    githubLink: 'https://github.com/danncodil/CapPRO',
+    githubAction: 'Ver no GitHub',
+  },
 ]
 
 export const services = [
