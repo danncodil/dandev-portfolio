@@ -65,6 +65,7 @@ export const projects = [
     action: 'Baixar para Windows',
     githubLink: 'https://github.com/danncodil/CapPRO',
     githubAction: 'Ver no GitHub',
+    logo: './assets/cappro-logo.png',
   },
 ]
 
