@@ -18,7 +18,12 @@ export default function ProjectCard({ project, index, total }) {
       <div className="project-visual" onPointerMove={moveLight} onPointerLeave={resetLight}>
         {project.watermark && <img className="project-watermark" src={project.watermark} alt="" />}
         <span className="real-badge"><BadgeCheck size={15} /> Projeto real</span>
-        {project.logo ? <img className="project-logo" src={project.logo} alt={`Logo ${project.title}`} /> : <div className="project-logo project-monogram" aria-label="CapPRO">CP</div>}
+        <div className="project-preview">
+          <img src={project.screenshot} alt={project.screenshotAlt} loading="lazy" />
+        </div>
+        <span className="project-logo-mark">
+          <img src={project.logo} alt={`Logo ${project.title}`} loading="lazy" />
+        </span>
         {project.symbol && <img className="project-symbol" src={project.symbol} alt="" />}
         <span className="project-index">0{index + 1}</span>
         <span className="project-visual-caption" aria-hidden="true">DanDeV / projeto 0{index + 1}</span>
