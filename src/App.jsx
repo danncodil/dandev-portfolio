@@ -20,6 +20,7 @@ import { contact, processSteps, projects, services, technologies } from './data/
 
 export default function App() {
   const [showTop, setShowTop] = useState(false)
+  const [projectType, setProjectType] = useState('')
 
   useEffect(() => {
     const elements = document.querySelectorAll('.reveal')
@@ -115,10 +116,11 @@ export default function App() {
           <div className="section-number">03</div>
           <SectionTitle eyebrow="Serviços" title="Como posso ajudar seu negócio." />
           <div className="services-grid">
-            {services.map(({ icon: Icon, title, description }, index) => (
-              <article className="service-card reveal" style={{ '--delay': `${index * 80}ms` }} key={title}>
-                <span className="service-number">0{index + 1}</span><Icon /><h3>{title}</h3><p>{description}</p><ArrowRight className="service-arrow" />
-              </article>
+            {services.map(({ icon: Icon, title, description, formValue }, index) => (
+              <a className="service-card reveal" href="#contato" onClick={() => setProjectType(formValue)} style={{ '--delay': `${index * 80}ms` }} key={title}>
+                <span className="service-number">0{index + 1}</span><Icon /><h3>{title}</h3><p>{description}</p>
+                <span className="service-action">Conversar sobre isso <ArrowRight size={17} /></span>
+              </a>
             ))}
           </div>
         </section>
@@ -173,7 +175,7 @@ export default function App() {
             <div className="form-head"><span>Conte sobre seu projeto</span><small>Resposta via WhatsApp</small></div>
             <label>Nome<input required name="nome" type="text" placeholder="Como posso te chamar?" /></label>
             <label>E-mail<input required name="email" type="email" placeholder="seuemail@exemplo.com" /></label>
-            <label>Projeto<select required name="projeto" defaultValue=""><option value="" disabled>O que você precisa?</option><option>Site profissional</option><option>Desenvolvimento web</option><option>Sistema personalizado</option><option>Manutenção ou melhoria</option></select></label>
+            <label>Projeto<select required name="projeto" value={projectType} onChange={(event) => setProjectType(event.target.value)}><option value="" disabled>O que você precisa?</option><option>Site profissional</option><option>Desenvolvimento web</option><option>Sistema personalizado</option><option>Manutenção ou melhoria</option></select></label>
             <label>Mensagem<textarea required name="mensagem" rows="4" placeholder="Fale um pouco sobre sua ideia..." /></label>
             <button className="button primary" type="submit">Enviar mensagem <Send size={17} /></button>
           </form>

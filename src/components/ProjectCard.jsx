@@ -1,9 +1,21 @@
 import { ArrowUpRight, BadgeCheck } from 'lucide-react'
 
 export default function ProjectCard({ project, index, total }) {
+  const moveLight = (event) => {
+    if (event.pointerType !== 'mouse' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const bounds = event.currentTarget.getBoundingClientRect()
+    event.currentTarget.style.setProperty('--pointer-x', `${(event.clientX - bounds.left) / bounds.width * 100}%`)
+    event.currentTarget.style.setProperty('--pointer-y', `${(event.clientY - bounds.top) / bounds.height * 100}%`)
+  }
+
+  const resetLight = (event) => {
+    event.currentTarget.style.removeProperty('--pointer-x')
+    event.currentTarget.style.removeProperty('--pointer-y')
+  }
+
   return (
     <article id={`projeto-${project.slug}`} className={`project-card project-${project.slug} reveal`} style={{ '--delay': `${index * 90}ms` }}>
-      <div className="project-visual">
+      <div className="project-visual" onPointerMove={moveLight} onPointerLeave={resetLight}>
         {project.watermark && <img className="project-watermark" src={project.watermark} alt="" />}
         <span className="real-badge"><BadgeCheck size={15} /> Projeto real</span>
         {project.logo ? <img className="project-logo" src={project.logo} alt={`Logo ${project.title}`} /> : <div className="project-logo project-monogram" aria-label="CapPRO">CP</div>}

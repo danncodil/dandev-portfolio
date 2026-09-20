@@ -73,24 +73,28 @@ export const services = [
   {
     icon: Globe2,
     title: 'Sites profissionais',
+    formValue: 'Site profissional',
     description:
       'Landing pages, sites institucionais e portfólios que passam confiança e convertem visitantes em contatos.',
   },
   {
     icon: Code2,
     title: 'Desenvolvimento web',
+    formValue: 'Desenvolvimento web',
     description:
       'Interfaces modernas, rápidas, responsivas e adaptadas a cada necessidade.',
   },
   {
     icon: Layers3,
     title: 'Sistemas personalizados',
+    formValue: 'Sistema personalizado',
     description:
       'Soluções para organizar processos, atendimentos, informações e rotinas de negócios.',
   },
   {
     icon: RefreshCw,
     title: 'Manutenção e melhorias',
+    formValue: 'Manutenção ou melhoria',
     description:
       'Ajustes, evolução visual e melhorias em sites e sistemas existentes.',
   },
