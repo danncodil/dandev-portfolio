@@ -41,8 +41,6 @@ export const projects = [
     link: 'https://danncodil.github.io/finance-app/#/',
     action: 'Acessar projeto',
     logo: './assets/logo-trio.png',
-    screenshot: './assets/trio-interface.png',
-    screenshotAlt: 'Tela de acesso do TRIO App com campos de e-mail e senha',
     symbol: './assets/simbolo-trio.png',
   },
   {
@@ -55,8 +53,6 @@ export const projects = [
     link: 'https://danncodil.github.io/rodiziosal71/',
     action: 'Ver sistema',
     logo: './assets/sal71-logo.png',
-    screenshot: './assets/sal71-interface.png',
-    screenshotAlt: 'Painel de rodízio de atendimento da Barbearia Sal71',
     watermark: './assets/sal71-watermark.png',
   },
   {
@@ -70,8 +66,6 @@ export const projects = [
     githubLink: 'https://github.com/danncodil/CapPRO',
     githubAction: 'Ver no GitHub',
     logo: './assets/cappro-logo.png',
-    screenshot: './assets/cappro-app-interface.png',
-    screenshotAlt: 'Interface do CapPRO com controles de captura, gravação e ajustes',
   },
 ]
 
