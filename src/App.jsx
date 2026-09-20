@@ -38,8 +38,8 @@ export default function App() {
   const handleSubmit = (event) => {
     event.preventDefault()
     const form = new FormData(event.currentTarget)
-    const message = `Olá, Daniel! Meu nome é ${form.get('nome')}.%0A%0AProjeto: ${form.get('projeto')}%0AE-mail: ${form.get('email')}%0A%0A${form.get('mensagem')}`
-    window.open(`${contact.whatsapp}?text=${message}`, '_blank', 'noopener,noreferrer')
+    const message = `Olá, Daniel! Meu nome é ${form.get('nome')}.\n\nProjeto: ${form.get('projeto')}\nE-mail: ${form.get('email')}\n\n${form.get('mensagem')}`
+    window.open(`${contact.whatsapp}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -103,7 +103,12 @@ export default function App() {
         <section className="projects section" id="projetos">
           <div className="section-number">02</div>
           <SectionTitle eyebrow="Projetos selecionados" title="Projetos que saíram do papel." description="Soluções digitais criadas para necessidades reais." />
-          <div className="project-list">{projects.map((project, index) => <ProjectCard project={project} index={index} key={project.slug} />)}</div>
+          <nav className="project-directory reveal" aria-label="Ir para um projeto">
+            {projects.map((project, index) => <a href={`#projeto-${project.slug}`} key={project.slug}>
+              <span>0{index + 1}</span>{project.title}<ArrowRight size={16} />
+            </a>)}
+          </nav>
+          <div className="project-list">{projects.map((project, index) => <ProjectCard project={project} index={index} total={projects.length} key={project.slug} />)}</div>
         </section>
 
         <section className="services section" id="servicos">
