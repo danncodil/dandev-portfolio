@@ -108,6 +108,7 @@ h1 em, h2 em { color: transparent; font-style: normal; background: linear-gradie
 .project-sal71 .project-logo { width: 53%; max-height: 270px; }.project-watermark { position: absolute; z-index: 1; width: 95%; height: 95%; object-fit: contain; opacity: .08; }
 .project-symbol { position: absolute; z-index: 1; width: 145px; right: -18px; bottom: -22px; opacity: .12; object-fit: contain; animation: slowSpin 18s linear infinite; }
 .real-badge { position: absolute; z-index: 3; top: 22px; left: 22px; display: flex; align-items: center; gap: 7px; padding: 7px 10px; border: 1px solid rgba(255,255,255,.13); border-radius: 100px; background: rgba(5,11,22,.65); color: #d6e4f5; font-size: .72rem; backdrop-filter: blur(8px); }
+.real-badge.in-progress { border-color: rgba(198,255,97,.28); background: rgba(7,33,29,.78); color: #c6ff61; }
 .project-index { position: absolute; right: 18px; top: 5px; color: rgba(255,255,255,.05); font: 800 7rem/1 'Manrope'; }
 .project-content { display: flex; flex-direction: column; justify-content: center; padding: 48px; }
 .project-category { margin-bottom: 12px; color: #5ca8ff !important; font: 700 .76rem 'Manrope'; letter-spacing: .13em; text-transform: uppercase; }.project-sal71 .project-category { color: #d4ad58 !important; }
@@ -116,6 +117,9 @@ h1 em, h2 em { color: transparent; font-style: normal; background: linear-gradie
 .project-monogram { display: grid; place-items: center; width: 210px; height: 210px; border: 1px solid rgba(86,169,255,.36); border-radius: 34px; background: linear-gradient(145deg, rgba(24,132,255,.28), rgba(6,26,56,.8)); color: white; font: 800 4.4rem/1 'Manrope'; letter-spacing: -.08em; box-shadow: 0 20px 55px rgba(0,0,0,.28), inset 0 0 45px rgba(24,132,255,.12); }
 .project-cappro .project-visual { background: radial-gradient(circle at 50% 48%, rgba(115,66,255,.38), transparent 35%), radial-gradient(circle at 78% 25%, rgba(255,31,88,.2), transparent 25%), linear-gradient(140deg, #160d39, #090b1a 72%); }
 .project-cappro .project-logo { width: 45%; max-height: 260px; filter: drop-shadow(0 18px 28px rgba(91,42,255,.4)); }
+.project-pulso .project-visual { background: radial-gradient(circle at 50% 48%, rgba(198,255,97,.2), transparent 38%), radial-gradient(circle at 75% 22%, rgba(58,133,106,.22), transparent 28%), linear-gradient(140deg, #0b2823, #071411 72%); }
+.project-pulso .project-logo { width: 43%; max-height: 285px; filter: drop-shadow(0 20px 35px rgba(160,255,78,.2)); }
+.project-pulso .project-category { color: #c6ff61 !important; }
 .project-directory { display: flex; flex-wrap: wrap; gap: 10px; margin: -20px 0 32px; }
 .project-directory a { display: inline-flex; align-items: center; gap: 11px; min-height: 42px; padding: 0 15px; border: 1px solid rgba(124,154,193,.21); border-radius: 100px; background: rgba(255,255,255,.025); color: #cad6e6; font: 600 .82rem 'Manrope', sans-serif; transition: border-color .25s, background .25s, transform .25s; }
 .project-directory a span { color: #66abff; font-size: .7rem; }
@@ -129,6 +133,7 @@ h1 em, h2 em { color: transparent; font-style: normal; background: linear-gradie
 .project-visual { --glow-rgb: 95, 172, 255; }
 .project-sal71 .project-visual { --glow-rgb: 224, 175, 73; }
 .project-cappro .project-visual { --glow-rgb: 146, 89, 255; }
+.project-pulso .project-visual { --glow-rgb: 198, 255, 97; }
 .project-visual::after { content: ''; position: absolute; inset: 0; background: radial-gradient(280px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(var(--glow-rgb), .27), transparent 78%); opacity: .72; pointer-events: none; transition: opacity .35s; }
 .project-card:hover .project-visual::after { opacity: 1; }
 .project-visual-caption { position: absolute; z-index: 3; left: 28px; bottom: 23px; color: rgba(224,235,249,.56); font: 700 .62rem 'Manrope', sans-serif; letter-spacing: .16em; text-transform: uppercase; }

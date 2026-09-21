@@ -67,6 +67,18 @@ export const projects = [
     githubAction: 'Ver no GitHub',
     logo: './assets/cappro-logo.png',
   },
+  {
+    slug: 'pulso',
+    title: 'Pulso Fitness',
+    category: 'Saúde e bem-estar',
+    description:
+      'Aplicação web para organizar treinos, alimentação, jejum, hábitos e acompanhar a evolução em um só lugar. Projeto em desenvolvimento, já disponível para exploração.',
+    technologies: ['React', 'JavaScript', 'CSS', 'Responsivo'],
+    link: 'https://pulsofitvert.vercel.app/',
+    action: 'Ver projeto em andamento',
+    logo: './assets/pulso-fitness-logo.png',
+    status: 'Em andamento',
+  },
 ]
 
 export const services = [
